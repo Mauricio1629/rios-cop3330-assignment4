@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.ToDoController">
+   <children>
+      <CheckBox layoutX="454.0" layoutY="439.0" mnemonicParsing="false" onAction="#completedItemsCheckBoxClicked" text="Completed Items" />
+      <CheckBox layoutX="455.0" layoutY="472.0" mnemonicParsing="false" onAction="#uncompletedItemsCheckBoxClicked" text="Uncompleted Items" />
+      <ListView fx:id="toDoListDisplay" layoutX="14.0" layoutY="92.0" prefHeight="256.0" prefWidth="345.0" />
+      <TableView fx:id="itemDisplay" layoutX="454.0" layoutY="111.0" prefHeight="308.0" prefWidth="372.0">
+        <columns>
+          <TableColumn fx:id="descriptionCellDisplay" prefWidth="75.0" text="Description" />
+          <TableColumn fx:id="dueDateCellDisplay" prefWidth="75.0" text="Due Date" />
+            <TableColumn fx:id="completeCellDisplay" prefWidth="75.0" text="Completion" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TextField fx:id="EnterListNameDisplay" layoutX="14.0" layoutY="17.0" promptText="Enter List Name" />
+      <TextField fx:id="EditListNameDisplay" layoutX="184.0" layoutY="17.0" promptText="Edit List Name" />
+      <TextField fx:id="dueDateDisplay" layoutX="454.0" layoutY="71.0" prefHeight="26.0" prefWidth="159.0" promptText="Due Date: YYYY-MM-DD" />
+      <Button layoutX="14.0" layoutY="56.0" mnemonicParsing="false" onAction="#addListButtonClicked" text="Add List" />
+      <Button layoutX="184.0" layoutY="55.0" mnemonicParsing="false" onAction="#editListButtonClicked" text="Edit List" />
+      <Button layoutX="760.0" layoutY="23.0" mnemonicParsing="false" onAction="#addItemButtonClicked" text="Add Item" />
+      <Button layoutX="624.0" layoutY="435.0" mnemonicParsing="false" onAction="#searchItemsButtonClicked" text="Search Items" />
+      <Button layoutX="12.0" layoutY="363.0" mnemonicParsing="false" onAction="#viewSelectedListButtonClicked" text="View Selected List Content" />
+      <Button layoutX="219.0" layoutY="363.0" mnemonicParsing="false" onAction="#deleteListButtonClicked" text="Delete List" />
+      <Button layoutX="14.0" layoutY="432.0" mnemonicParsing="false" onAction="#saveListButtonClicked" text="Save List" />
+      <Button layoutX="14.0" layoutY="477.0" mnemonicParsing="false" onAction="#saveAllListsButtonClicked" text="Save All Lists" />
+      <Button layoutX="217.0" layoutY="432.0" mnemonicParsing="false" onAction="#loadListButtonClicked" text="Load List" />
+      <Button layoutX="217.0" layoutY="477.0" mnemonicParsing="false" onAction="#loadAllListsButtonClicked" text="Load All Lists" />
+      <TextArea fx:id="descriptionDisplay" layoutX="454.0" layoutY="16.0" prefHeight="51.0" prefWidth="300.0" promptText="Description" />
+      <Button layoutX="744.0" layoutY="435.0" mnemonicParsing="false" onAction="#deleteItemButtonClicked" text="Delete Item" />
+      <TextArea fx:id="editDescriptionDisplay" layoutX="448.0" layoutY="503.0" prefHeight="41.0" prefWidth="257.0" promptText="Edit Description" />
+      <Button layoutX="720.0" layoutY="503.0" mnemonicParsing="false" onAction="#editDescriptionButtonClicked" text=" Edit Description" />
+      <TextField fx:id="editDueDateDisplay" layoutX="448.0" layoutY="559.0" prefHeight="26.0" prefWidth="178.0" promptText="Edit Due Date: YYYY-MM-DD" />
+      <Button layoutX="720.0" layoutY="559.0" mnemonicParsing="false" onAction="#editDueDateButtonClicked" text="Edit Due Date" />
+   </children>
+</AnchorPane>
